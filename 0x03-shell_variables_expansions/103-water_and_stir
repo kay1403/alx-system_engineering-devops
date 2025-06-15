@@ -1,2 +1,2 @@
 #!/bin/bash
-perl -lE '@w=split//,"waetr";@s=split//,"tristi";@b=split//,"bestchol";$a=0;$W=$ENV{WATER};$W=~s/./$a=$a*@w+(map{$w[$_]eq$&?$_:()}0..$#w)/ge;$b=0;$S=$ENV{STIR};$S=~s/./$b=$b*@s+(map{$s[$_]eq$&?$_:()}0..$#s)/ge;$c=$a+$b;@r=();do{unshift@r,$b[$c%@b];$c=int($c/@b)}while$c;print join"",@r'
+perl -e '@w=split//,"waetr" and @s=split//,"tristi" and @b=split//,"bestchol" and $a=0 and $W=$ENV{WATER} and $W=~s/./$a=$a*@w+(map{$w[$_]eq$_?$_:()}0..$#w)/ge and $b=0 and $S=$ENV{STIR} and $S=~s/./$b=$b*@s+(map{$s[$_]eq$_?$_:()}0..$#s)/ge and $c=$a+$b and @r=() and do{unshift@r,$b[$c%@b];$c=int($c/@b)}while$c and print join"",@r'
