@@ -6,8 +6,8 @@ global
     user haproxy
     group haproxy
     daemon
-    ssl-default-bind-ciphers ECDHE-RSA-AES128-GCM-SHA256
     ssl-default-bind-options no-sslv3
+    ssl-default-bind-ciphers ECDHE-RSA-AES128-GCM-SHA256
 
 defaults
     log     global
@@ -19,8 +19,8 @@ defaults
     timeout server  50000
 
 frontend https-in
-    bind *:443 ssl crt /etc/letsencrypt/live/www.yourdomain.com/fullchain.pem crt-key /etc/letsencrypt/live/www.yourdomain.com/privkey.pem
+    bind *:443 ssl crt /etc/letsencrypt/live/www.koumba.alx.online/fullchain.pem crt-key /etc/letsencrypt/live/www.koumba.alx.online/privkey.pem
     default_backend servers
 
 backend servers
-    server web-01 127.0.0.1:80 check
+    server web-01 172.31.0.101:80 check
